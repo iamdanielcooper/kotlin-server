@@ -1,5 +1,6 @@
 package com.terraceHouseServer.terraceHouseServer
 
+import com.terraceHouseServer.terraceHouseServer.model.Season
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 

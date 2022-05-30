@@ -12,8 +12,14 @@ class MockSeasonDataSource: SeasonDataSource {
 
 
     private val seasons =
-        listOf(seasonOne, seasonTwo)
+        mutableListOf<Season>(seasonOne, seasonTwo)
+
 
     override fun getSeasons(): Collection<Season> = seasons
+    override fun addSeason(season: Season): Collection<Season>  {
+        seasons.add(season)
+        return seasons
+    }
+
 
 }

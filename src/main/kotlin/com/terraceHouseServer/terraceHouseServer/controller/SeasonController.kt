@@ -8,11 +8,10 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-@RequestMapping("/seasons/")
+@RequestMapping("/seasons")
 class SeasonController(private val service: SeasonService) {
 
     @GetMapping
-    fun getSeasons(): Collection<Season> {
-        return service.getSeasons()
-    }
+    fun getSeasons(): Collection<Season> = service.getSeasons()
+
 }

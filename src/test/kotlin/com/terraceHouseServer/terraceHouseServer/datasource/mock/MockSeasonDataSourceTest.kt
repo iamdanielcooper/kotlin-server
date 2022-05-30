@@ -19,6 +19,10 @@ internal class MockSeasonDataSourceTest {
     @Test
     fun `Seasons should return mock data`() {
         val seasons = MockDataSource.getSeasons()
-        assertThat(seasons).allMatch { it.id.isNotBlank() }
+        assertThat(seasons).allMatch {
+            it.id.isNotBlank()
+
+        }
+        assertThat(seasons.stream().findFirst().get().id).isEqualTo("12")
     }
 }

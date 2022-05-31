@@ -6,4 +6,6 @@ interface SeasonDataSource {
     fun getSeasons(): Collection<Season>
 
     fun addSeason(season: Season): Collection<Season>
+
+    fun deleteSeason(id: String): Collection<Season>
 }

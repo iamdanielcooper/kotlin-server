@@ -21,5 +21,11 @@ class MockSeasonDataSource: SeasonDataSource {
         return seasons
     }
 
+    override fun deleteSeason(id: String): Collection<Season> {
+        val targetSeason = seasons.filter { it.id == id }
+            .firstOrNull()
+        seasons.remove(targetSeason)
+        return seasons
+    }
 
 }
